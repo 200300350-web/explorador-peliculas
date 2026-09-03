@@ -96,3 +96,11 @@ const Home = () => {
 };
 
 export default Home;
+
+import { Link } from 'react-router-dom';
+
+// Dentro de tu mapa de películas, donde construyes la tarjeta:
+<Link to={`/pelicula/${pelicula.id}`}>
+  <img src={`https://image.tmdb.org/t/p/w500${pelicula.poster_path}`} alt="poster" />
+  {/* Resto del contenido de la tarjeta */}
+</Link>

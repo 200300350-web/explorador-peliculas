@@ -19,3 +19,16 @@ const App = () => {
 };
 
 export default App;
+
+// Tus otras importaciones...
+import MovieDetails from './MovieDetails'; // Agrega esta línea
+
+// Dentro de tu return, en la sección de <Routes>:
+<Routes>
+  {/* Tus rutas actuales de Home y Favoritos */}
+  <Route path="/" element={<Home />} />
+  <Route path="/favoritos" element={<Favoritos />} />
+  
+  {/* ¡La nueva ruta para los detalles de la película! */}
+  <Route path="/pelicula/:id" element={<MovieDetails />} />
+</Routes>
