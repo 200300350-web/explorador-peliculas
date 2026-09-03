@@ -97,7 +97,7 @@ const Home = () => {
 
 export default Home;
 
-import { Link } from 'react-router-dom';
+
 
 // Dentro de tu mapa de películas, donde construyes la tarjeta:
 <Link to={`/pelicula/${pelicula.id}`}>
