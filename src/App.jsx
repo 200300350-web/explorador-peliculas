@@ -1,10 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 
-
-// Importamos las pantallas (ajusta la ruta si las metiste en carpetas)
-import Home from './Home'; 
-// Asumo que tienes o vas a crear un archivo para los Favoritos:
-import Favoritos from './Favoritos'; 
+// Importamos las pantallas
+import Home from './Home';
+import Favoritos from './Favoritos';
+import MovieDetails from './MovieDetails'; // <-- Aquí está el nuevo ingrediente
 
 const App = () => {
   return (
@@ -14,21 +13,11 @@ const App = () => {
       
       {/* Cuando le den clic al botón y la ruta cambie, sirve Favoritos */}
       <Route path="/favoritos" element={<Favoritos />} />
+
+      {/* ¡La nueva ruta para ver los detalles y reseñas de la película! */}
+      <Route path="/pelicula/:id" element={<MovieDetails />} />
     </Routes>
   );
 };
 
 export default App;
-
-// Tus otras importaciones...
-import MovieDetails from './MovieDetails'; // Agrega esta línea
-
-// Dentro de tu return, en la sección de <Routes>:
-<Routes>
-  {/* Tus rutas actuales de Home y Favoritos */}
-  <Route path="/" element={<Home />} />
-  <Route path="/favoritos" element={<Favoritos />} />
-  
-  {/* ¡La nueva ruta para los detalles de la película! */}
-  <Route path="/pelicula/:id" element={<MovieDetails />} />
-</Routes>
